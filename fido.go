@@ -52,7 +52,7 @@ func (d *AuthenticatorData) UnmarshalBinary(data []byte) error {
 			dec = cbor.NewDecoder(bytes.NewReader(data[33:]))
 		}
 		if (d.Flags & AuthenticatorDataFlagExtentionDataIncluded) != 0 {
-			err := dec.Decode(d.Extensions)
+			err := dec.Decode(&d.Extensions)
 			if err != nil {
 				return err
 			}
