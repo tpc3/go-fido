@@ -87,7 +87,6 @@ type PublicKeyCredentialRpEntity struct {
 // > The PublicKeyCredentialUserEntity dictionary is used to supply additional user account attributes when creating a new credential.
 // https://w3c.github.io/webauthn/#dictdef-publickeycredentialuserentity
 type PublicKeyCredentialUserEntity struct {
-	Name        string `cbor:"name" json:"name"`
 	ID          []byte `cbor:"id" json:"id"`
 	DisplayName string `cbor:"displayName" json:"displayName"`
 }
